@@ -1,0 +1,59 @@
+# FastAPI and Server
+# Note: Use --prefer-binary flag to get pre-built wheels (avoids Rust compilation)
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+# Pydantic 2.5.0 requires Rust - use pre-built wheels or downgrade to 2.4.2
+# If installation fails, try: pip install pydantic==2.4.2 pydantic-settings==2.1.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+
+# LLM and AI
+langchain==0.1.0
+langchain-community==0.0.10
+# Note: We use local LLM endpoints (LocalAI, llama.cpp, TextGen WebUI) via HTTP
+# No OpenAI API key required - all LLM calls go to local endpoints
+# sentence-transformers will be installed separately if needed
+# sentence-transformers==2.2.2
+
+# Vector Database
+# Note: ChromaDB may require additional dependencies
+# On Windows, install with: pip install chromadb --only-binary :all:
+chromadb==0.4.18
+
+# Search
+# Note: duckduckgo-search has been renamed to ddgs
+# Install with: pip install ddgs
+ddgs>=9.9.0
+beautifulsoup4==4.12.2
+
+# NLP
+# spaCy - install separately: python -m spacy download en_core_web_sm
+# spacy==3.7.2
+
+# PDF Processing
+# Note: Package name is PyPDF2 (capital P), but pip install uses pypdf2
+pypdf2==3.0.1
+pdfplumber==0.10.3
+
+# Report Generation
+reportlab==4.0.7
+jinja2==3.1.2
+markdown==3.5.1
+
+# Utilities
+python-dotenv==1.0.0
+aiofiles==23.2.1
+httpx==0.25.2
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Optional: AutoGen
+# pyautogen==0.2.12
+
+# Development
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0
+
